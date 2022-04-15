@@ -29,12 +29,10 @@ const personalMovieDB = {
     privat: false 
 };
 
-const a = prompt("один из последний просмотренных филмьов", ''), 
-      b = +prompt("оцените фильм от 1 до 10", ''),
-      c = prompt("один из последний просмотренных филмьов", ''),
-      d = +prompt("оцените фильм от 1 до 10", '');
-
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+for (let i = 0; i < 2; i++) {
+    const a = prompt("один из последний просмотренных филмьов", ''), 
+          b = +prompt("оцените фильм от 1 до 10", '');
+    personalMovieDB.movies[a] = b;
+}
 
 console.log(personalMovieDB)
