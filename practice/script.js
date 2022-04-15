@@ -32,3 +32,4 @@ switch (num) {
         console.log("NOt this time")
         break;
 }
+//условия 
