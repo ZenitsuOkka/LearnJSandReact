@@ -62,8 +62,8 @@
 // }
 
 //функции
-function showFirstMessage() {
-    console.log('Hello')
+function showFirstMessage(text) {
+    console.log(text)
 }
 
-showFirstMessage();
+showFirstMessage("Hello");
