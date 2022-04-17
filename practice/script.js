@@ -74,10 +74,17 @@
 
 // console.log(calc(4, 3));
 
-function ret() {
-    let num = 25;
-    return num;
-}
+// function ret() {
+//     let num = 25;
+//     return num;
+// }
 
-const anotherNum = ret();
-console.log(anotherNum);
+// const anotherNum = ret();
+// console.log(anotherNum);
+
+//function expression
+
+const logger = function() {
+    console.log("Hello");
+};
+logger();
