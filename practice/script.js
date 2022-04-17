@@ -68,8 +68,16 @@
 
 // showFirstMessage("Hello");
 
-function calc (a, b) {
-    return (a + b);
-} 
+// function calc (a, b) {
+//     return (a + b);
+// } 
 
-console.log(calc(4, 3));
+// console.log(calc(4, 3));
+
+function ret() {
+    let num = 25;
+    return num;
+}
+
+const anotherNum = ret();
+console.log(anotherNum);
