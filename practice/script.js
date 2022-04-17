@@ -36,7 +36,7 @@
 
 //Cycls
 
-let num = 50;
+// let num = 50;
 
 // while (num <= 55) {
 //     console.log(num);
@@ -53,10 +53,17 @@ let num = 50;
 //     console.log(i);
 // }
 
-for (let i = 1; i < 10; i++) {
-    if (i === 6) {
-        // break;
-        continue;
-    }   
-    console.log(i);
+// for (let i = 1; i < 10; i++) {
+//     if (i === 6) {
+//         // break;
+//         continue;
+//     }   
+//     console.log(i);
+// }
+
+//функции
+function showFirstMessage() {
+    console.log('Hello')
 }
+
+showFirstMessage();
