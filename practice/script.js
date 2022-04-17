@@ -84,7 +84,11 @@
 
 //function expression
 
-const logger = function() {
-    console.log("Hello");
-};
-logger();
+// const logger = function() {
+//     console.log("Hello");
+// };
+// logger();
+
+//стрелочные функции 
+
+const calc = (a, b) => a + b;
