@@ -62,8 +62,14 @@
 // }
 
 //функции
-function showFirstMessage(text) {
-    console.log(text)
-}
+// function showFirstMessage(text) {
+//     console.log(text)
+// }
 
-showFirstMessage("Hello");
+// showFirstMessage("Hello");
+
+function calc (a, b) {
+    return (a + b);
+} 
+
+console.log(calc(4, 3));
