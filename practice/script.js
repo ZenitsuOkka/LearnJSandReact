@@ -97,6 +97,12 @@
 
 //методы это ввспомогательные функции а свойства это спомогательные значение
 
-const str = 'text';
+// const str = 'text';
+// const arr = [1, 2, 3];
 
-console.log(str.length)
+// console.log(str.length)
+// console.log(arr.length)
+
+const fruit = 'Some fruit';
+
+console.log(fruit.indexOf("fruit"))
