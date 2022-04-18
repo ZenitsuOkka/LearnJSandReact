@@ -164,19 +164,22 @@ const options = {
     }
 };
 
-console.log(options.name)
+console.log(Object.keys(options))
 
-delete options.name
+// delete options.name
 
-console.log(options)
+// console.log(options)
+
 //for in конструкция
-for (let key in options) {
-    if (typeof(options[key]) === 'object'){
-        for (let i in options[key]) {
-            console.log(`свойство ${i} имеет значение ${options[key][i]}`)
-        }
-    } else {
-        console.log(`свойство ${key} имеет значение ${options[key]}`)
-    } 
-}
-
+// let counter = 0;
+// for (let key in options) {
+//     if (typeof(options[key]) === 'object'){
+//         for (let i in options[key]) {
+//             console.log(`свойство ${i} имеет значение ${options[key][i]}`)
+//         }
+//     } else {
+//         console.log(`свойство ${key} имеет значение ${options[key]}`)
+//     } 
+//     counter++;
+// }
+// console.log(counter) 
