@@ -106,3 +106,8 @@
 const fruit = 'Some fruit';
 
 console.log(fruit.indexOf("fruit"))
+
+const logg = 'Hello world'
+
+console.log(logg.slice(6))
+console.log(logg.slice(-5, -1))
