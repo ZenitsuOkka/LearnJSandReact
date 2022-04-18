@@ -126,31 +126,45 @@
 
 //callback функции 
  
-function first() {
-    //do something
-    setTimeout(function() {
-        console.log(1);
-    }, 500);
-}
+// function first() {
+//     //do something
+//     setTimeout(function() {
+//         console.log(1);
+//     }, 500);
+// }
 
-function second() {
-    console.log(2)
-}
+// function second() {
+//     console.log(2)
+// }
 
-first();
-second();
+// first();
+// second();
 
-function learnJs(lang, callback) {
-    console.log(`Я учу ${lang}`)
-    callback();
-}
+// function learnJs(lang, callback) {
+//     console.log(`Я учу ${lang}`)
+//     callback();
+// }
 
-learnJs('javascript', function(){
-    console.log('Я прошел этот урок!');
-});
+// learnJs('javascript', function(){
+//     console.log('Я прошел этот урок!');
+// });
 
 
+//Обьекты, деструкция обьектов 
 
+// const obj = new Object();
+
+const options = {
+    name: 'test',
+    width: 1024,
+    height: 1024,
+    color: {
+        border: 'black',
+        bg: 'red'
+    }
+};
+
+console.log(options.name)
 
 
  
