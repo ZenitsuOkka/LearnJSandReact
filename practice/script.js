@@ -164,7 +164,7 @@ const options = {
     }
 };
 
-console.log(Object.keys(options))
+console.log(Object.keys(options).length)
 
 // delete options.name
 
