@@ -65,8 +65,14 @@ const personalMovieDB = {
     },
     writeYourGenres: function() {
         for (let i = 1; i <= 3; i++) {
-            const moovieGeners = prompt(`Ваш любимый жанр под номером ${i}`, '');
-            personalMovieDB.geners[i - 1] = moovieGeners;
+            let genre = prompt(`Ваш любимый жанр под номером ${i}`, '');
+            
+            if (genre == "" || genre === null) {
+                console.log('Вы ввели некоректные данные'),
+                i--;
+            } else {
+                personalMovieDB.geners[i - 1] = genre;
+            }
         }
     },
     toggleVisibleMyDB: function() {
