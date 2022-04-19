@@ -154,17 +154,22 @@
 
 // const obj = new Object();
 
-const options = {
-    name: 'test',
-    width: 1024,
-    height: 1024,
-    color: {
-        border: 'black',
-        bg: 'red'
-    }
-};
+// const options = {
+//     name: 'test',
+//     width: 1024,
+//     height: 1024,
+//     color: {
+//         border: 'black',
+//         bg: 'red'
+//     },
+//     makeTest: function() {
+//         console.log('test')
+//     }
+// };
 
-console.log(Object.keys(options).length)
+// options.makeTest();
+
+// console.log(Object.keys(options).length)
 
 // delete options.name
 
@@ -183,3 +188,25 @@ console.log(Object.keys(options).length)
 //     counter++;
 // }
 // console.log(counter) 
+
+
+//массивы и псевдомассивы
+ 
+const arr = [1, 2, 3, 6, 8];
+
+// arr.pop();//удаляет последний элемент из массива
+// arr.push(10); //одбавляет вконец
+
+// console.log(arr);
+
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
+
+for (let value of arr) { //работает только с масивами 
+    console.log(value)
+}
+//Свойство length состоит из последнего индекса +1
+arr.forEach(function(item, i, arr) {
+    console.log(`${i}: ${item} внутри массива ${arr}`);
+});
