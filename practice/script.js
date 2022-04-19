@@ -298,12 +298,41 @@
 
 // console.log(internet);
 
-function log(a, b, c) {
-    console.log(a)
-    console.log(b)
-    console.log(c)
+// function log(a, b, c) {
+//     console.log(a)
+//     console.log(b)
+//     console.log(c)
 
-}
-const num = [2, 5, 6];
+// }
+// const num = [2, 5, 6];
 
-log(...num);
+// log(...num);
+
+
+// //копирование обьектов и масивов с помощью оператора ...
+// const array = ['a', 'b'];
+
+// const newAarray = [...array];
+
+// const q = {
+//     one: 1,
+//     two: 2
+// };
+
+// const newObj = {...q};
+
+//Основы ООП прототипно ориентированное наследие
+
+const soldiers = {
+    health: 400,
+    armor: 100
+};
+
+const john = {
+    health: 100
+};
+
+john.__proto__ = soldiers;
+
+console.log(john)//{ health: 100 }
+console.log(john.armor)//100
