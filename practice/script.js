@@ -192,7 +192,13 @@
 
 //массивы и псевдомассивы
  
-// const arr = [1, 2, 3, 6, 8];
+const arr = [1, 22, 100, 2, 3, 6, 8, 14, 15, 8];
+arr.sort(compareNum);//мето сорт сортирует по строкам
+console.log(arr);
+
+function compareNum(a, b) {
+    return a - b
+};
 
 // arr.pop();//удаляет последний элемент из массива
 // arr.push(10); //одбавляет вконец
@@ -211,6 +217,6 @@
 //     console.log(`${i}: ${item} внутри массива ${arr}`);
 // });
 
-const str = prompt("", "");
-const products = str.split(", ");
-console.log(products.join('; '));
+// const str = prompt("", "");
+// const products = str.split(", ");
+// console.log(products.join('; '));
