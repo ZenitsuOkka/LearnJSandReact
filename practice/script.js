@@ -292,8 +292,18 @@
 // console.log(oldArray);
 
 
-const video = ['youtube', 'vimeo', 'rutube'],
-      blogs = ['wordpress', 'livejornal', 'blogger'],
-      internet = [...video, ...blogs, 'vk', 'facebook'];
+// const video = ['youtube', 'vimeo', 'rutube'],
+//       blogs = ['wordpress', 'livejornal', 'blogger'],
+//       internet = [...video, ...blogs, 'vk', 'facebook'];
 
-console.log(internet);
+// console.log(internet);
+
+function log(a, b, c) {
+    console.log(a)
+    console.log(b)
+    console.log(c)
+
+}
+const num = [2, 5, 6];
+
+log(...num);
