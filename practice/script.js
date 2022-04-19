@@ -213,4 +213,4 @@
 
 const str = prompt("", "");
 const products = str.split(", ");
-console.log(products);
+console.log(products.join('; '));
