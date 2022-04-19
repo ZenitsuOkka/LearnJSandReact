@@ -245,48 +245,55 @@
 // console.log(copy)
 // console.log(obj)
 
-function copy (mainObj) { //функция для копирования обьекта
-    let objCopy = {};
-    let key;
-    for (key in mainObj) {
-        objCopy[key] = mainObj[key];
-    }
+// function copy (mainObj) { //функция для копирования обьекта
+//     let objCopy = {};
+//     let key;
+//     for (key in mainObj) {
+//         objCopy[key] = mainObj[key];
+//     }
 
-    return objCopy;
-}
+//     return objCopy;
+// }
 
-const numbers = {
-    a: 2,
-    b: 5,
-    c: {
-        x: 7,
-        y: 4
-    }
-};
+// const numbers = {
+//     a: 2,
+//     b: 5,
+//     c: {
+//         x: 7,
+//         y: 4
+//     }
+// };
 
-const newNumbers = copy(numbers);
+// const newNumbers = copy(numbers);
 
-newNumbers.a = 10;
+// newNumbers.a = 10;
 
-console.log(newNumbers);
-console.log(numbers );
+// console.log(newNumbers);
+// console.log(numbers );
 
-const add = {
-    v: 17,
-    i: 20
-};
+// const add = {
+//     v: 17,
+//     i: 20
+// };
 
-console.log(Object.assign(numbers, add));
+// console.log(Object.assign(numbers, add));
 
-const clone = Object.assign({}, add);
+// const clone = Object.assign({}, add);
 
-clone.d = 20
+// clone.d = 20
 
-console.log(clone)
-//massive clone
-const oldArray = ['a', 'b', 'c'];
-const newArray = oldArray.slice();
+// console.log(clone)
+// //massive clone
+// const oldArray = ['a', 'b', 'c'];
+// const newArray = oldArray.slice();
 
-newArray[1] = 'abc';
-console.log(newArray);
-console.log(oldArray);
+// newArray[1] = 'abc';
+// console.log(newArray);
+// console.log(oldArray);
+
+
+const video = ['youtube', 'vimeo', 'rutube'],
+      blogs = ['wordpress', 'livejornal', 'blogger'],
+      internet = [...video, ...blogs, 'vk', 'facebook'];
+
+console.log(internet);
