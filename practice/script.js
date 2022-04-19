@@ -325,14 +325,24 @@
 
 const soldiers = {
     health: 400,
-    armor: 100
+    armor: 100,
+    sayHello: function() {
+        console.log('Hello')
+    }
 };
 
-const john = {
-    health: 100
-};
+const john = Object.create(soldiers);
+console.log(john);
+john.sayHello();
+ 
 
-john.__proto__ = soldiers;
+// const john = {
+//     health: 100
+// };
 
-console.log(john)//{ health: 100 }
-console.log(john.armor)//100
+// // john.__proto__ = soldiers;
+// Object.setPrototypeOf(john, soldiers)
+
+// console.log(john)//{ health: 100 }
+// console.log(john.armor)//100
+// john.sayHello();
