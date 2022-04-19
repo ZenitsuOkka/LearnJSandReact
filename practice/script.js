@@ -245,7 +245,7 @@
 // console.log(copy)
 // console.log(obj)
 
-function copy (mainObj) {
+function copy (mainObj) { //функция для копирования обьекта
     let objCopy = {};
     let key;
     for (key in mainObj) {
@@ -270,3 +270,10 @@ newNumbers.a = 10;
 
 console.log(newNumbers);
 console.log(numbers );
+
+const add = {
+    v: 17,
+    i: 20
+};
+
+console.log(Object.assign(numbers, add));
