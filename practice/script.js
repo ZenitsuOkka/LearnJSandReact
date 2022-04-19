@@ -335,6 +335,7 @@ const john = Object.create(soldiers);
 console.log(john);
 john.sayHello();
  
+//ООП наука о правильной архитектуре
 
 // const john = {
 //     health: 100
