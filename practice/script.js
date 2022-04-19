@@ -283,3 +283,10 @@ const clone = Object.assign({}, add);
 clone.d = 20
 
 console.log(clone)
+//massive clone
+const oldArray = ['a', 'b', 'c'];
+const newArray = oldArray.slice();
+
+newArray[1] = 'abc';
+console.log(newArray);
+console.log(oldArray);
