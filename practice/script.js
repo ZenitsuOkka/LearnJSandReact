@@ -192,13 +192,13 @@
 
 //массивы и псевдомассивы
  
-const arr = [1, 22, 100, 2, 3, 6, 8, 14, 15, 8];
-arr.sort(compareNum);//мето сорт сортирует по строкам
-console.log(arr);
+// const arr = [1, 22, 100, 2, 3, 6, 8, 14, 15, 8];
+// arr.sort(compareNum);//метод сорт изнкчально сортирует по строкам
+// console.log(arr);
 
-function compareNum(a, b) {
-    return a - b
-};
+// function compareNum(a, b) {
+//     return a - b
+// };
 
 // arr.pop();//удаляет последний элемент из массива
 // arr.push(10); //одбавляет вконец
@@ -220,3 +220,53 @@ function compareNum(a, b) {
 // const str = prompt("", "");
 // const products = str.split(", ");
 // console.log(products.join('; '));
+
+//псевдомасиваы это структурированные данные без всех свойств и методов массива
+
+//передача данніх по ссілкам и по значениям
+
+// let a = 5;
+//     b = a;
+
+// b = b + 5;
+
+// console.log(b)
+// console.log(a)
+
+// const obj = {
+//     a: 5,
+//     b: 1
+// };
+
+// const copy = obj; //передача по ссылке уже существующего обьекта
+
+// copy.a = 10;
+
+// console.log(copy)
+// console.log(obj)
+
+function copy (mainObj) {
+    let objCopy = {};
+    let key;
+    for (key in mainObj) {
+        objCopy[key] = mainObj[key];
+    }
+
+    return objCopy;
+}
+
+const numbers = {
+    a: 2,
+    b: 5,
+    c: {
+        x: 7,
+        y: 4
+    }
+};
+
+const newNumbers = copy(numbers);
+
+newNumbers.a = 10;
+
+console.log(newNumbers);
+console.log(numbers );
