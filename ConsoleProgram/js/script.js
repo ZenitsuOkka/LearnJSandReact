@@ -24,7 +24,7 @@ const personalMovieDB = {
     movies: {},
     actors: {},
     geners: [],
-    privat: false 
+    privat: false,
     start: function() {
         personalMovieDB.count = prompt("сколько фильмов вы посмотрели?", '');
     
@@ -68,23 +68,16 @@ const personalMovieDB = {
             const moovieGeners = prompt(`Ваш любимый жанр под номером ${i}`, '');
             personalMovieDB.geners[i - 1] = moovieGeners;
         }
+    },
+    toggleVisibleMyDB: function() {
+        if (personalMovieDB. privat) {
+            personalMovieDB.privat = false;
+        } else {
+            personalMovieDB.privat = true;
+        }
     }
-    
-
 
 };
-
-
-
-
-
-
-
-
-
-
-
-showMyDB(personalMovieDB.privat);
 
 
 
