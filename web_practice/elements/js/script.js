@@ -28,4 +28,6 @@ const div = document.createElement('div');
 
 div.classList.add('black');
 
-document.body.append(div);
+// document.body.append(div);//добавление нового елемента в конец кода
+
+document.querySelector('.wrapper').append(div);
