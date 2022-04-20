@@ -21,3 +21,5 @@ btns[1].style.borderRadius = '100%';
 hearts.forEach(item => {
     item.style.backgroundColor = 'black';
 });
+
+const div = document.createElement('div');
