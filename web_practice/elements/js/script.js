@@ -4,7 +4,8 @@ const box =  document.getElementById('box'),
       circles = document.getElementsByClassName('circle'),
       btns = document.getElementsByTagName("button"),
       oneHeart = document.querySelector('.heart'),
-      hearts = document.querySelectorAll(".heart");
+      hearts = document.querySelectorAll(".heart"),
+      wrapper = document.querySelector('.wrapper');
       
 
 // box.style.backgroundColor = 'green';
@@ -26,8 +27,12 @@ const div = document.createElement('div');
 
 // const text = document.createTextNode('Hello Andrej');
 
-div.classList.add('black');
+// div.classList.add('black');
 
 // document.body.append(div);//добавление нового елемента в конец кода
 
-document.querySelector('.wrapper').append(div);
+
+
+// wrapper.prepend(div);//поднимает блок над последним
+
+hearts[0].before(btns[0]);
