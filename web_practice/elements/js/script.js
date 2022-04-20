@@ -11,3 +11,5 @@ console.log(btns[1]);
 const circles = document.getElementsByClassName('circle');
 console.log(circles);
 
+const hearts = document.querySelectorAll(".heart");
+console.log(hearts);
