@@ -12,4 +12,9 @@ const circles = document.getElementsByClassName('circle');
 console.log(circles);
 
 const hearts = document.querySelectorAll(".heart");
-console.log(hearts);
+
+hearts.forEach(item => {
+    console.log(item);
+})
+
+
