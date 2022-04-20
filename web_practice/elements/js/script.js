@@ -18,8 +18,14 @@ btns[1].style.borderRadius = '100%';
 //     hearts[i].style.backgroundColor = 'green';
 // }
 
-hearts.forEach(item => {
-    item.style.backgroundColor = 'black';
-});
+// hearts.forEach(item => {
+//     item.style.backgroundColor = 'black';
+// });
 
 const div = document.createElement('div');
+
+// const text = document.createTextNode('Hello Andrej');
+
+div.classList.add('black');
+
+document.body.append(div);
