@@ -9,3 +9,5 @@ const box =  document.getElementById('box'),
 
 box.style.backgroundColor = 'green';
 box.style.width = '400px';
+
+btns[1].style.borderRadius = '100%';
