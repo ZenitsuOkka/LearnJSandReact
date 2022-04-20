@@ -1,11 +1,11 @@
 'use strict';
 
-const box =  document.getElementById('box');
-      circles = document.getElementsByClassName('circle');
-      btns = document.getElementsByTagName("button");//получили псевдо массив
-      oneHeart = document.querySelector('.heart');//метод возвращает первый эелемент такого селектора
+const box =  document.getElementById('box'),
+      circles = document.getElementsByClassName('circle'),
+      btns = document.getElementsByTagName("button"),
+      oneHeart = document.querySelector('.heart'),
       hearts = document.querySelectorAll(".heart");
       
-//методы querySelector и getElementById возвращают один элемент
-//методы querySelectorAll, getElementsByTagName возвращают псевдомассив
 
+box.style.backgroundColor = 'green';
+box.style.width = '400px';
