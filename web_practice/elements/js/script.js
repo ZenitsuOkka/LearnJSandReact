@@ -27,16 +27,18 @@ const div = document.createElement('div');
 
 // const text = document.createTextNode('Hello Andrej');
 
-// div.classList.add('black');
+div.classList.add('black');
 
-// document.body.append(div);//добавление нового елемента в конец кода
+document.body.append(div);//добавление нового елемента в конец кода
 
 
 
 // wrapper.prepend(div);//поднимает блок над последним
 
-hearts[0].before(btns[0]);
+// hearts[0].before(btns[0]);
 
 circles[0].remove();//удаление эелемента
 
 hearts[2].replaceWith(circles[1]);
+
+div.innerHTML = '<h1>Hello</h1>';  
