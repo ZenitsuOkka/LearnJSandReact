@@ -17,6 +17,8 @@ hearts.forEach(item => {
     console.log(item);
 })
 
-const oneHeart = document.querySelector('.heart');
+const oneHeart = document.querySelector('.heart');//метод возвращает первый эелемент такого селектора
 
 console.log(oneHeart);
+//методы querySelector и getElementById возвращают один элемент
+//методы querySelectorAll, getElementsByTagName возвращают псевдомассив
