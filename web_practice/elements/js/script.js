@@ -41,4 +41,8 @@ circles[0].remove();//удаление эелемента
 
 hearts[2].replaceWith(circles[1]);
 
-div.innerHTML = '<h1>Hello</h1>';  
+div.innerHTML = '<h1>Hello</h1>'; 
+
+// div.textContent = 'Hello';
+
+div.insertAdjacentHTML('beforebegin', "<h2>hello</h2>")
