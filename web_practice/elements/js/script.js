@@ -4,6 +4,6 @@ const box =  document.getElementById('box');
 
 console.log(box);
 
-const btns = document.getElementsByTagName("button")[1];//получили псевдо массив
+const btns = document.getElementsByTagName("button");//получили псевдо массив
 
-console.log(btns);
+console.log(btns[1]);
