@@ -36,3 +36,5 @@ const div = document.createElement('div');
 // wrapper.prepend(div);//поднимает блок над последним
 
 hearts[0].before(btns[0]);
+
+circles[0].remove();
