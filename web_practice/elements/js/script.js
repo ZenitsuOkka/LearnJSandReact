@@ -17,4 +17,6 @@ hearts.forEach(item => {
     console.log(item);
 })
 
+const oneHeart = document.querySelector('.heart');
 
+console.log(oneHeart);
