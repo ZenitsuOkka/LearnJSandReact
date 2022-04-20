@@ -323,17 +323,17 @@
 
 //Основы ООП прототипно ориентированное наследие
 
-const soldiers = {
-    health: 400,
-    armor: 100,
-    sayHello: function() {
-        console.log('Hello')
-    }
-};
+// const soldiers = {
+//     health: 400,
+//     armor: 100,
+//     sayHello: function() {
+//         console.log('Hello')
+//     }
+// };
 
-const john = Object.create(soldiers);
-console.log(john);
-john.sayHello();
+// const john = Object.create(soldiers);
+// console.log(john);
+// john.sayHello();
  
 //ООП наука о правильной архитектуре
 
@@ -347,3 +347,4 @@ john.sayHello();
 // console.log(john)//{ health: 100 }
 // console.log(john.armor)//100
 // john.sayHello();
+
