@@ -37,4 +37,6 @@ const div = document.createElement('div');
 
 hearts[0].before(btns[0]);
 
-circles[0].remove();
+circles[0].remove();//удаление эелемента
+
+hearts[2].replaceWith(circles[1]);
