@@ -7,3 +7,7 @@ console.log(box);
 const btns = document.getElementsByTagName("button");//получили псевдо массив
 
 console.log(btns[1]);
+
+const circles = document.getElementsByClassName('circle');
+console.log(circles);
+
