@@ -14,6 +14,10 @@ box.style.cssText = 'background-color: blue; width: 500px';
 
 btns[1].style.borderRadius = '100%';
 
-for (let i = 0; i < hearts.length; i++) {
-    hearts[i].style.backgroundColor = 'green';
-}
+// for (let i = 0; i < hearts.length; i++) {
+//     hearts[i].style.backgroundColor = 'green';
+// }
+
+hearts.forEach(item => {
+    item.style.backgroundColor = 'black';
+});
