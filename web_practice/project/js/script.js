@@ -30,8 +30,8 @@ const movieDB = {
 
 const adv = document.querySelectorAll('.promo__adv img'),
       changeGenre = document.querySelector('.promo__genre'),
-      changeBg = document.querySelector('.promo__bg');
-
+      changeBg = document.querySelector('.promo__bg'),
+      movieList = document.querySelector('.promo__interactive-list');
 
             //колбек функция стрелочная
 adv.forEach(item => {
@@ -44,3 +44,5 @@ changeGenre.textContent = 'Драма';
 
 
 changeBg.style.backgroundImage = "url('img/bg.jpg')";
+
+movieList.innerHTML = "";
