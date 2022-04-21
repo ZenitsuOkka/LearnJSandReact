@@ -24,12 +24,22 @@ const movieDB = {
     ]
 };
 
-const promoBanners = document.querySelectorAll('.promo__adv');
+// const promoBanners = document.querySelectorAll('.promo__adv');
 
-promoBanners[0].remove();
+// promoBanners[0].remove();
+
+const adv = document.querySelectorAll('.promo__adv img');
+
+adv.forEach(item => {
+    item.remove();
+});
+
+// const changeGenre = document.querySelector('.promo__genre');
+// console.log(changeGenre);
+
+// changeGenre.textContent = 'Драма';
 
 
-const changeGenre = document.querySelector('.promo__genre');
-console.log(changeGenre);
+// const changeBg = document.querySelector('.promo__bg');
 
-changeGenre.textContent = 'Драма';
+// changeBg.style.cssText = "background: url('../img/bg.jpg');";
