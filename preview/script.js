@@ -8,7 +8,9 @@ const btn = document.querySelector("button");
 //     alert('Click2')
 // });
 
-btn.addEventListener('mouseenter', (e) => {
-    console.log(e.target);
+const deleteElement = (e) => { //очень важно называть переменную Element
     e.target.remove();
-});
+};
+
+btn.addEventListener('click', deleteElement);
+btn.removeEventListener('click', deleteElement);
