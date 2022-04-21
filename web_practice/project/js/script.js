@@ -51,7 +51,7 @@ movieDB.movies.sort();
 
 movieDB.movies.forEach((film, i) => {
     movieList.innerHTML += `
-    <li class="promo__interactive-item">СКОТТ ПИЛИГРИМ ПРОТИВ...
+    <li class="promo__interactive-item">${i + 1} ${film}
         <div class="delete"></div>
     </li>
     `;
