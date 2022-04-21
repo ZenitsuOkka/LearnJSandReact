@@ -24,7 +24,12 @@ const movieDB = {
     ]
 };
 
-const promo_banners = document.querySelectorAll('.promo__adv')
+const promoBanners = document.querySelectorAll('.promo__adv');
 
-promo_banners[0].remove();
+promoBanners[0].remove();
 
+
+const changeGenre = document.querySelector('.promo__genre');
+console.log(changeGenre);
+
+changeGenre.textContent = 'Драма';
