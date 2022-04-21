@@ -28,18 +28,19 @@ const movieDB = {
 
 // promoBanners[0].remove();
 
-const adv = document.querySelectorAll('.promo__adv img');
+const adv = document.querySelectorAll('.promo__adv img'),
+      changeGenre = document.querySelector('.promo__genre'),
+      changeBg = document.querySelector('.promo__bg');
 
+
+            //колбек функция стрелочная
 adv.forEach(item => {
     item.remove();
 });
+// adv.forEach(function(item){
+//     item.remove();
+// });
+changeGenre.textContent = 'Драма';
 
-// const changeGenre = document.querySelector('.promo__genre');
-// console.log(changeGenre);
 
-// changeGenre.textContent = 'Драма';
-
-
-// const changeBg = document.querySelector('.promo__bg');
-
-// changeBg.style.cssText = "background: url('../img/bg.jpg');";
+changeBg.style.backgroundImage = "url('img/bg.jpg')";
