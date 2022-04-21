@@ -4,6 +4,11 @@ const btn = document.querySelector("button");
 //     alert("Click1");
 // }
 
-btn.addEventListener('click', () => {
-    alert('Click2')
+// btn.addEventListener('click', () => {
+//     alert('Click2')
+// });
+
+btn.addEventListener('mouseenter', (e) => {
+    console.log(e.target);
+    e.target.remove();
 });
