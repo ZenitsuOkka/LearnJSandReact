@@ -46,3 +46,13 @@ changeGenre.textContent = 'Драма';
 changeBg.style.backgroundImage = "url('img/bg.jpg')";
 
 movieList.innerHTML = "";
+
+movieDB.movies.sort();
+
+movieDB.movies.forEach((film, i) => {
+    movieList.innerHTML += `
+    <li class="promo__interactive-item">СКОТТ ПИЛИГРИМ ПРОТИВ...
+        <div class="delete"></div>
+    </li>
+    `;
+});
