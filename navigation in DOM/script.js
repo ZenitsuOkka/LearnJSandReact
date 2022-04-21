@@ -6,4 +6,6 @@
 
 console.log(document.querySelector('#current').parentNode.parentNode);//обертка для блоков
  
-console.log(document.querySelector('[data-current="3"]'));
+console.log(document.querySelector('[data-current="3"]').nextSibling);
+console.log(document.querySelector('[data-current="3"]').previousSibling);
+
