@@ -8,4 +8,5 @@ console.log(document.querySelector('#current').parentNode.parentNode);//обер
  
 console.log(document.querySelector('[data-current="3"]').nextSibling);
 console.log(document.querySelector('[data-current="3"]').previousSibling);
-
+console.log(document.querySelector('[data-current="3"]').previousElementSibling);
+//все эти принципы 
