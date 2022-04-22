@@ -47,12 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const newFilm = addInput.value;
         const favorit = checkbox.checked;
 
-        movieDB.movies.push(newFilm);
-        sortArr(movieDB.movies);
+        if (newFilm) {
+            movieDB.movies.push(newFilm);
+            sortArr(movieDB.movies);
 
-        createMovieList(movieDB.movies, movieList);
-
-        addForm.target.reset();
+            createMovieList(movieDB.movies, movieList);
+        };
+        event.target.reset();
 
     })
     
