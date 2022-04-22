@@ -81,11 +81,12 @@ document.addEventListener('DOMContentLoaded', () => {
         arr.sort();
     };
 
-    sortArr(movieDB.movies);
     
     function createMovieList(films, parent) {
         parent.innerHTML = "";
-    
+        
+        sortArr(films);
+
         films.forEach((film, i) => {
             parent.innerHTML += `
             <li class="promo__interactive-item">${i + 1} ${film}
@@ -98,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.addEventListener('click', () => {
                 btn.parentElement.remove();
                 movieDB.movies.splice(i, 1);
-                createMovieList(movieDB.movies, movieList);
+                createMovieList(films, parent);
                 
             });
         });
