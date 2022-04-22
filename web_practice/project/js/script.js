@@ -21,6 +21,7 @@ P.S. Здесь есть несколько вариантов решения з
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
+    
     const movieDB = {
         movies: [
             "Логан",
@@ -31,36 +32,58 @@ document.addEventListener('DOMContentLoaded', () => {
         ]
     };
     
-    // const promoBanners = document.querySelectorAll('.promo__adv');
-    
-    // promoBanners[0].remove();
-    
     const adv = document.querySelectorAll('.promo__adv img'),
           changeGenre = document.querySelector('.promo__genre'),
           changeBg = document.querySelector('.promo__bg'),
-          movieList = document.querySelector('.promo__interactive-list');
-    
-                //колбек функция стрелочная
-    adv.forEach(item => {
-        item.remove();
-    });
-    // adv.forEach(function(item){
-    //     item.remove();
-    // });
-    changeGenre.textContent = 'Драма';
+          movieList = document.querySelector('.promo__interactive-list'),
+          addForm = document.querySelector('form.add'),
+          addInput = addForm.querySelector('.adding__input'),
+          checkbox = addForm.querySelector('[type="checkbox"]');
     
     
-    changeBg.style.backgroundImage = "url('img/bg.jpg')";
+    addForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        
+        const newFilm = addInput.value;
+        const favorit = checkbox.checked;
+
+        movieDB.movies.push(newFilm);
+        movieDB.movies.sort();
+    })
     
-    movieList.innerHTML = "";
+    const deleteAdv = (arr) => {
+        arr.forEach(item => {
+            item.remove();
+        });
+    };
+
+    deleteAdv(adv);
+ 
+    const makeChanges = () => {
+        changeGenre.textContent = 'Драма';
     
-    movieDB.movies.sort();
+        changeBg.style.backgroundImage = "url('img/bg.jpg')";    
+    };
+
+    makeChanges();
+
+    const sortArr = (arr) => {
+        arr.sort();
+    };
+
+    sortArr(movieDB.movies);
     
-    movieDB.movies.forEach((film, i) => {
-        movieList.innerHTML += `
-        <li class="promo__interactive-item">${i + 1} ${film}
-            <div class="delete"></div>
-        </li>
-        `;
-    });
+    function createMovieList(films, parent) {
+        parent.innerHTML = "";
+    
+        films.forEach((film, i) => {
+            parent.innerHTML += `
+            <li class="promo__interactive-item">${i + 1} ${film}
+                <div class="delete"></div>
+            </li>
+            `;
+        });
+    };
+
+    createMovieList(movieDB.movies, movieList);
 });
