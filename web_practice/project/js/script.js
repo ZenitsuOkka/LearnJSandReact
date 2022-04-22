@@ -48,7 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const favorit = checkbox.checked;
 
         movieDB.movies.push(newFilm);
-        movieDB.movies.sort();
+        sortArr(movieDB.movies);
+
+        createMovieList(movieDB.movies, movieList);
+
+        addForm.target.reset();
+
     })
     
     const deleteAdv = (arr) => {
