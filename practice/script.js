@@ -350,3 +350,30 @@
 
 //События и их обработчики
 //Это все события мышы и клавиатурыБ браузера и всего остального
+
+// МОБИЛЬНЫЕ СОБЫТИЯ
+
+// touchstart ////срабатывает при косании
+
+//touchmove
+//touchend
+
+//touchenter
+
+//touchleave
+
+//tocuhcansel
+
+const box = document.querySelector('.box');
+
+box.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+
+    console.log('start');
+})
+
+box.addEventListener('touchmove', (e) => {
+    e.preventDefault();
+
+    console.log('move');
+})
