@@ -17,3 +17,10 @@ function logger () {
     console.log('Text')
     i++;
 };
+
+// let id = setTimeout(function log() {
+//     console.log('hello');
+//     id = setTimeout(log, 500);
+// }, 500);
+
+//сетТаймаунт лучше потому что они ждут каждые свои время в отличии от интервала
