@@ -21,6 +21,7 @@ btns[0].addEventListener('click', () => {
 });
 
 wrapper.addEventListener('click', (event) => {
+    console.dir(event.target);
     if (event.target && event.target.tagName == "BUTTON") {
         console.log('Hello')
     }
