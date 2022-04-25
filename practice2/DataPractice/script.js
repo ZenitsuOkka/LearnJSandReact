@@ -17,5 +17,16 @@ new Date.parse('0200-04-25')
 console.log(now.setFullYear(200));
 console.log(now)
 
+let start = new Date();
+
+for (let i = 0; i < 100000; i++) {
+    let some = i ** 3;
+
+}
+
+let end = new Date();
+
+alert(`Цикл отработал за ${end - start} миллисекунд`);
+
 
 
