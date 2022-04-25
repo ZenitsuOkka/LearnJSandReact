@@ -1,6 +1,11 @@
-const timeeId = setTimeout(logger, 2000);
+const btn = document.querySelector('.btn');\
 
-clearInterval(timeeId);
+btn.addEventListener('click', () => {
+    const timeeId = setTimeout(logger, 2000);
+
+}); 
+
+// clearInterval(timeeId);
 
 function logger() {
     console.log('Text')
