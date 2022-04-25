@@ -22,7 +22,7 @@ btns[0].addEventListener('click', () => {
 
 wrapper.addEventListener('click', (event) => {
     // console.dir(event.target);
-    if (event.target && event.target.tagName == "BUTTON") {
+    if (event.target && event.target.matches("button")) {
         console.log('Hello')
     }
 });
@@ -30,3 +30,6 @@ wrapper.addEventListener('click', (event) => {
 const btn = document.createElement('button');
 btn.classList.add('red');
 wrapper.append(btn);
+
+
+//делегирований событий очень полезная функия при работе с ДОМ деревом
