@@ -1,7 +1,7 @@
 'use strict';
 
-const now =  new Date();
-
+const now =  new Date('0200-04-25');
+new Date.parse('0200-04-25')
 // console.log(now)
 
 // console.log(now.getFullYear());
