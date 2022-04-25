@@ -1,3 +1,3 @@
-const timeeId = setTimeout(function() {
-    console.log('hello')
-}, 2000);
+const timeeId = setTimeout(function(text) {
+    console.log(text)
+}, 2000, 'Hello andrej');
