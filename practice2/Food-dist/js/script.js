@@ -22,4 +22,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
     hideTabContent();
     showTabContent();
+
+    tabsPerent.addEventListener('click', (event) => {
+        const target = event.target;
+
+        if (target && target.classList.contains('tabheader__item')) {
+            tabs.forEach((item, i) => {
+                if (target == item) {
+                    hideTabContent();
+                    showTabContent(i);
+                }
+            })
+        }
+    });
 });
