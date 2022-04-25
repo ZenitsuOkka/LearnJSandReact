@@ -21,8 +21,12 @@ btns[0].addEventListener('click', () => {
 });
 
 wrapper.addEventListener('click', (event) => {
-    console.dir(event.target);
+    // console.dir(event.target);
     if (event.target && event.target.tagName == "BUTTON") {
         console.log('Hello')
     }
 });
+
+const btn = document.createElement('button');
+btn.classList.add('red');
+wrapper.append(btn);
