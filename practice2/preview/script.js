@@ -13,10 +13,26 @@ const width = box.scrollWidth;
 const height = box.scrollHeight;
 
 
-btn.addEventListener('click', () => {
-    box.style.height = box.scrollHeight + 'px';
-});
+// btn.addEventListener('click', () => {
+//     box.style.height = box.scrollHeight + 'px';
+// });
+
+// btn.addEventListener('click', () => {
+//     if (box.style.height = box.scrollHeight + 'px') {
+//         box.style.height = box.offsetHeight +'px';
+//     }
+// });
+function once() {
+    box.style.height = box.scrollHeight + 'px';   
+};
+
+btn.addEventListener("click", once);
+
+const style = window.getComputedStyle(box);
+
+console.log(style.display);
 
 
+// console.log(width, height);
 
-console.log(width, height);
+// console.log(box.getBoundingClientRect());
