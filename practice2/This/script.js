@@ -64,3 +64,17 @@ btn.addEventListener('click', function() {
     this.style.backgroundColor = 'red';
 });
 //Когда обработчик событий который идет как кол бек функция написан в класическом режиме через функцию() контекст вызовы будет сам елемент 
+
+//у стрелочной функции нет своего контекста вызова она берет его у  воего родителя
+
+const obj = {
+    num: 5,
+    sayName: function() {
+        const say = () => {
+            console.log(this);
+        };
+        say();
+    }
+}
+
+obj.sayName();
