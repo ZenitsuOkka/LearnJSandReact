@@ -24,14 +24,27 @@
 
 // obj.sum();
 
-function User(name, id) {
-    this.name = name;//this обозначает что у каждого нового обьекта будет свое значение имени и идентификатора
-    this.id = id;
-    this.human = true;//после использования такого синтаксиса наша функция стало конструктор и с помощью его мы можем создаватьновые обьекты
+// function User(name, id) {
+//     this.name = name;//this обозначает что у каждого нового обьекта будет свое значение имени и идентификатора
+//     this.id = id;
+//     this.human = true;//после использования такого синтаксиса наша функция стало конструктор и с помощью его мы можем создаватьновые обьекты
+// }
+
+// let ivan = new User('Ivan', 23)
+
+function sayName() {
+    console.log(this);
+    console.log(this.name);
 }
 
-let ivan = new User('Ivan', 23)
+const user = {
+    name: 'john'
+};
+
+sayName.call(user);
+sayName.apply(user);
 
 // 1) Oбычная функция this = window, но если 'use strict'; - undefined
 // 2) Контекст у методов обьекта это будет сам обьект
 // 3) This в конструкторах и ассах - это новый экземпляр  обьекта 
+// 4) Ручное присвоение this 
