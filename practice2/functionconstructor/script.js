@@ -15,6 +15,11 @@ function User(name, id) {
     };
 }
 
+User.prototype.exit = function() {
+    console.log(`Пользователь ${this.name} ушел`);
+};
+
+
 const ivan = new User('Ivan', 28);
 const alex = new User('Alex', 20);
 
@@ -23,4 +28,6 @@ console.log(ivan);
 
 ivan.hello();
 alex.hello();
+
+ivan.exit();
 
