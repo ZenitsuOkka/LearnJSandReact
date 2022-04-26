@@ -5,7 +5,7 @@ function showThis(a, b) {
     console.log(this);
     function sum() {
         console.log(this)
-        return this.a + this.b;
+        return a + b;
     }
     console.log(sum());
 }
