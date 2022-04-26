@@ -16,6 +16,6 @@ const ivan = new User('Ivan', 28);
 const alex = new User('Alex', 20);
 
 console.log(alex);
-;console.log(ivan)
+console.log(ivan);
 
 
