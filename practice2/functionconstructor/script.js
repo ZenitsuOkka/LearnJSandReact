@@ -9,4 +9,13 @@
 function User(name, id) {
     this.name = name;//this обозначает что у каждого нового обьекта будет свое значение имени и идентификатора
     this.id = id;
+    this.human = true;//после использования такого синтаксиса наша функция стало конструктор и с помощью его мы можем создаватьновые обьекты
 }
+
+const ivan = new User('Ivan', 28);
+const alex = new User('Alex', 20);
+
+console.log(alex);
+;console.log(ivan)
+
+
