@@ -44,16 +44,22 @@
 // sayName.call(user, 'Smith');//не создает новую функцию а устанавливает контекст
 // sayName.apply(user, ['Orlov']);
 
-function count(num) {
-    return this*num;
-}
+// function count(num) {
+//     return this*num;
+// }
 
-const double = count.bind(2);
+// const double = count.bind(2);//создает новую функцию
 
-console.log(double(5));
+// console.log(double(5));
 
 
 // 1) Oбычная функция this = window, но если 'use strict'; - undefined
 // 2) Контекст у методов обьекта это будет сам обьект
 // 3) This в конструкторах и ассах - это новый экземпляр  обьекта 
-// 4) Ручное присвоение this 
+// 4) Ручное присвоение this call, apply, bind
+
+const btn = document.querySelector('button');
+
+btn.addEventListener('click', function() {
+    console.log(this);
+});
