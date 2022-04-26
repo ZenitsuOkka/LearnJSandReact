@@ -59,11 +59,11 @@ window.addEventListener('DOMContentLoaded', () => {
         };    
     }
 
-    function getZero(num) {
-        if (num >= 0 && num < 10) {
-            return `0${num}`;
+    function getZero(item) {
+        if (item >= 0 && item < 10) {
+            return `0${item}`;
         } else {
-            return num;
+            return item;
         }
     };
 
@@ -93,4 +93,7 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
     setClock('.timer', deadline);
+
+    console.log(getZero(5))
 });
+
