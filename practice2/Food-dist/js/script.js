@@ -116,8 +116,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     }); 
 
-    modal.addEventListener('click', (event) => {
-        if(event.target === modal) {
+    modal.addEventListener('click', (e) => {
+        if(e.target === modal) {
             modal.classList.add('hide');
             modal.classList.remove('show');
             document.body.style.overflow = '';
