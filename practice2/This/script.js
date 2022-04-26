@@ -15,11 +15,14 @@ const obj = {
     a: 20,
     b: 15,
     sum: function() {
-        console.log(this)
+        function shout() {
+            console.log(this);
+        }
+        shout();
     }
 };
 
 obj.sum();
 
 // 1) Oбычная функция this = window, но если 'use strict'; - undefined
-// 2)
+// 2) Контекст у методов обьекта это будет сам обьект
