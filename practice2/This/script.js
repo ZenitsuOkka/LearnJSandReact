@@ -32,17 +32,17 @@
 
 // let ivan = new User('Ivan', 23)
 
-function sayName() {
+function sayName(surname) {
     console.log(this);
-    console.log(this.name);
+    console.log(this.name + surname);
 }
 
 const user = {
     name: 'john'
 };
 
-sayName.call(user);
-sayName.apply(user);
+sayName.call(user, 'Smith');
+sayName.apply(user, ['Orlov']);
 
 // 1) Oбычная функция this = window, но если 'use strict'; - undefined
 // 2) Контекст у методов обьекта это будет сам обьект
