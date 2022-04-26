@@ -36,3 +36,7 @@ console.log(style.display);
 // console.log(width, height);
 
 // console.log(box.getBoundingClientRect());
+
+window.scrollBy(0, 400);
+window.scrollTo(0, 400);
+
