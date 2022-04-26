@@ -101,14 +101,16 @@ window.addEventListener('DOMContentLoaded', () => {
           modalClose = document.querySelector('[data-close]');
     
     modalTrigger.addEventListener('click', () => {
-        modal.classList.add('show');
-        modal.classList.remove('hide');
+        // modal.classList.add('show');
+        // modal.classList.remove('hide');
+        modal.classList.toggle('show');
         document.body.style.overflow = 'hidden';
     });
     
     modalClose.addEventListener('click', () => {
-        modal.classList.add('hide');
-        modal.classList.remove('show');
+        // modal.classList.add('hide');
+        // modal.classList.remove('show');
+        modal.classList.toggle('show');
         document.body.style.overflow = '';
 
     }); 
