@@ -61,5 +61,6 @@
 const btn = document.querySelector('button');
 
 btn.addEventListener('click', function() {
-    console.log(this);
+    this.style.backgroundColor = 'red';
 });
+//Когда обработчик событий который идет как кол бек функция написан в класическом режиме через функцию() контекст вызовы будет сам елемент 
