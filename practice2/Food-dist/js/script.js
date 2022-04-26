@@ -101,13 +101,13 @@ window.addEventListener('DOMContentLoaded', () => {
           modalClose = document.querySelector('[data-close]');
     
     modalTrigger.forEach(btn => {
-        btn.addEventListener('click', () => {
-            modal.classList.add('show');
-            modal.classList.remove('hide');
-            document.body.style.overflow = 'hidden';
-        });
+        btn.addEventListener('click', openModal);
     });
- 
+    function openModal() {
+        modal.classList.add('show');
+        modal.classList.remove('hide');
+        document.body.style.overflow = 'hidden'; 
+    }
     function closeModal() {
         modal.classList.add('hide');
         modal.classList.remove('show');
@@ -128,6 +128,8 @@ window.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }
     })
+
+    const modalTimerId = setTimeout();
 
 });
 
