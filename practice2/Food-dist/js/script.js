@@ -177,8 +177,10 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    const div = new MenuCard();
-    div.render();
+    // const div = new MenuCard();
+    // div.render();
+
+    new MenuCard().render(); //создаем обьект и в нем же вызывает метод
 
 });
 
