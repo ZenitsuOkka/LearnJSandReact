@@ -163,17 +163,17 @@ window.addEventListener('DOMContentLoaded', () => {
             const element = document.createElement('div');
             element.innerHTML = `
                 <div class="menu__item">
-                        <img src="img/tabs/elite.jpg" alt="elite">
-                        <h3 class="menu__item-subtitle">Меню “Премиум”</h3>
-                        <div class="menu__item-descr">В меню “Премиум” мы используем не только красивый дизайн упаковки, но и качественное исполнение блюд. Красная рыба, морепродукты, фрукты - ресторанное меню без похода в ресторан!</div>
+                        <img src=${this.src} alt=${this.alt}>
+                        <h3 class="menu__item-subtitle">${this.title}</h3>
+                        <div class="menu__item-descr">${this.descr}</div>
                         <div class="menu__item-divider"></div>
                         <div class="menu__item-price">
                             <div class="menu__item-cost">Цена:</div>
-                            <div class="menu__item-total"><span>550</span> грн/день</div>
+                            <div class="menu__item-total"><span>${this.price}</span> грн/день</div>
                         </div>
                 </div>
             `;
-            this.parent.append(element);
+            this.parent.append(element); 
         }
     }
 
