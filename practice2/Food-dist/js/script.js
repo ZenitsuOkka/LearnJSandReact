@@ -150,9 +150,29 @@ window.addEventListener('DOMContentLoaded', () => {
             this.title = title;
             this.descr = descr;
             this.price = price; 
+            this.transfer = 27;
+            this.changeToUAH();
         }
 
-        
+        changeToUAH() {
+            this.price = this.price * this.transfer;
+        }
+
+        render() {
+            const element = document.createElement('div');
+            element.innerHTML = `
+                <div class="menu__item">
+                        <img src="img/tabs/elite.jpg" alt="elite">
+                        <h3 class="menu__item-subtitle">Меню “Премиум”</h3>
+                        <div class="menu__item-descr">В меню “Премиум” мы используем не только красивый дизайн упаковки, но и качественное исполнение блюд. Красная рыба, морепродукты, фрукты - ресторанное меню без похода в ресторан!</div>
+                        <div class="menu__item-divider"></div>
+                        <div class="menu__item-price">
+                            <div class="menu__item-cost">Цена:</div>
+                            <div class="menu__item-total"><span>550</span> грн/день</div>
+                        </div>
+                </div>
+            `;
+        }
     }
 
 });
