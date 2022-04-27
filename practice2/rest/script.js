@@ -12,3 +12,10 @@ function myFun(a, b, ...manyMoreArgs) {
   // a, один
   // b, два
   // manyMoreArgs, [три, четыре, пять, шесть]
+
+  function calcOrDouble(number, basis) {
+      basis = basis || 2;
+      console.log(number * basis);
+  }
+
+  calcOrDouble(3);
