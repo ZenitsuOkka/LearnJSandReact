@@ -13,5 +13,7 @@ class Reactangle {
 }
 
 const square = new Reactangle(10, 10); 
+const long = new Reactangle(20, 100); 
 
 console.log(square.calcArea())
+console.log(long.calcArea())
