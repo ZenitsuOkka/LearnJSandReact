@@ -12,6 +12,14 @@ class Reactangle {
     }
 }
 
+class ColoredReactangleWithText extends Reactangle {
+    constructor(height, width, text, bgColor) {
+        super(height, width);//Вызывает суперконструктор родител
+        this.text = text;
+        this.bgColor = bgColor;
+    }
+}
+
 const square = new Reactangle(10, 10); 
 const long = new Reactangle(20, 100); 
 
