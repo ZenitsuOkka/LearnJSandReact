@@ -144,7 +144,7 @@ window.addEventListener('DOMContentLoaded', () => {
     //Используем классы для карточек 
 
     class MenuCard {
-        constructor(src, alt, title, descr, price) {
+        constructor(src, alt, title, descr, price, parentSelector ) {
             this.src = src;
             this.alt = alt;
             this.title = title;
@@ -152,6 +152,7 @@ window.addEventListener('DOMContentLoaded', () => {
             this.price = price; 
             this.transfer = 27;
             this.changeToUAH();
+            this.parent = document.querySelector(parentSelector);
         }
 
         changeToUAH() {
@@ -172,6 +173,7 @@ window.addEventListener('DOMContentLoaded', () => {
                         </div>
                 </div>
             `;
+
         }
     }
 
