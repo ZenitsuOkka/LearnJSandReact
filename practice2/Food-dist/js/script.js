@@ -177,5 +177,8 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    const div = new MenuCard();
+    div.render();
+
 });
 
