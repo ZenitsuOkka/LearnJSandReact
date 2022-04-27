@@ -130,7 +130,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    const modalTimerId = setTimeout(openModal, 3000);
+    // const modalTimerId = setTimeout(openModal, 3000);
 
     function showModalByScroll() {
         if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight -1) {
@@ -140,6 +140,12 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     
     window.addEventListener('scroll', showModalByScroll);
+
+    //Используем классы для карточек 
+
+    class MenuCard {
+        
+    }
 
 });
 

@@ -63,6 +63,10 @@ const btn = document.querySelector('button');
 btn.addEventListener('click', function() {
     this.style.backgroundColor = 'red';
 });
+
+btn.addEventListener('click', function() {
+    this.style.backgroundColor = 'red';
+});
 //Когда обработчик событий который идет как кол бек функция написан в класическом режиме через функцию() контекст вызовы будет сам елемент 
 
 //у стрелочной функции нет своего контекста вызова она берет его у  воего родителя
@@ -82,3 +86,5 @@ obj.sayName();
 const double = a => a * 2;
 
 console.log(double(4));
+
+//В обработчиках событий когда мы используем обычнй синтаксис через фанкшен мы имеем доступ к this, а если мы сиспользуем стрелочную функцию то контекст вызова теряется и мы не можем его использовать
