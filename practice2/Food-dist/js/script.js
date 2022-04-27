@@ -173,7 +173,7 @@ window.addEventListener('DOMContentLoaded', () => {
                         </div>
                 </div>
             `;
-
+            this.parent.append(element);
         }
     }
 
