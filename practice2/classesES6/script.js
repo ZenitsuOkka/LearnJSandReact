@@ -31,3 +31,5 @@ const div = new ColoredReactangleWithText(25, 10, 'Andrey', 'red');
 
 console.log(square.calcArea())
 console.log(long.calcArea())
+div.showMyProps();
+console.log(div.calcArea())
