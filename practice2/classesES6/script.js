@@ -18,10 +18,16 @@ class ColoredReactangleWithText extends Reactangle {
         this.text = text;
         this.bgColor = bgColor;
     }
+
+    showMyProps() {
+        console.log(`Text: ${this.text}, color: ${this.bgColor}`);
+    }
 }
 
 const square = new Reactangle(10, 10); 
 const long = new Reactangle(20, 100); 
+
+const div = new ColoredReactangleWithText(25, 10, 'Andrey', 'red');
 
 console.log(square.calcArea())
 console.log(long.calcArea())
