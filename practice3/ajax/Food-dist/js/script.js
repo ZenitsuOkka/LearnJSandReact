@@ -233,7 +233,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
             request.send(formData);
 
-            
+            request.addEventListener('load', () => {
+                if (request.status === 200) {
+                    console.log(request.response);
+                }
+            });
         });
     }
 });
