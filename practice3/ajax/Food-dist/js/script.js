@@ -221,9 +221,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const forms = document.querySelectorAll('form');
 
+    const message = {
+        loading: 'Загрузка',
+        success: 'Спасибо! Мы скоро с вами свяжемся',
+        failure: 'Что-то пошло не так'
+    };
+
     function postData(form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
+
+            
 
             const request = new XMLHttpRequest();
             request.open('POST', 'server.php');
