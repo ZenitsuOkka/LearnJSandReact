@@ -227,6 +227,10 @@ window.addEventListener('DOMContentLoaded', () => {
         failure: 'Что-то пошло не так'
     };
 
+    forms.forEach(item => {
+        postData(item);
+    });
+
     function postData(form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -247,6 +251,9 @@ window.addEventListener('DOMContentLoaded', () => {
             request.addEventListener('load', () => {
                 if (request.status === 200) {
                     console.log(request.response);
+                    statusMessage.textContent = message.success;
+                } else {
+                    statusMessage.textContent = message.failure;
                 }
             });
         });
