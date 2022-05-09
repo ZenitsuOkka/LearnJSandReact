@@ -248,6 +248,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
             request.send(formData);
 
+            const object = {};
+            formData.forEach(function(value, key){
+                object[key] = value;
+            });
+
+            const json = JSON.stringify(object);
+
+            request.send(json);
+
             request.addEventListener('load', () => {
                 if (request.status === 200) {
                     console.log(request.response);
