@@ -12,8 +12,23 @@
 
 //map
 
-let answer = ['AnnnA', 'PeTR', 'YukLa'];
+// let answer = ['AnnnA', 'PeTR', 'YukLa'];
 
-answer = answer.map(item => item.toLowerCase());
+// answer = answer.map(item => item.toLowerCase());
 
-console.log(answer);
+// console.log(answer);
+
+
+// const answer = ['AnnnA', 'PeTR', 'YukLa'];
+
+// const result = answer.map(item => item.toLowerCase());
+
+// console.log(result);
+
+// every/some
+
+const per = [5, 6, 'andrey'];
+
+console.log(per.some(item => typeof(item) === 'number'));
+
+console.log(per.every(item => typeof(item) ==='number'));
