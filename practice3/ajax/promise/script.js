@@ -22,7 +22,11 @@ req.then((product) => {
             resolve(product);
         }, 2000);
     }).then(data => {
+        data.modify = true;
+        return data;
+    }).then((data) => {
         console.log(data);
+
     });
 
     
