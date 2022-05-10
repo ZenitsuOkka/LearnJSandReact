@@ -2,6 +2,10 @@
 
 console.log('zapros dannuh')
 
+const req = new Promise(function(resolve, reject){
+    
+});
+
 setTimeout(() => {
     console.log('podgotovka dannuh');
 
