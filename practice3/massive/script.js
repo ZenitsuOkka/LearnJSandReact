@@ -49,11 +49,23 @@
 
 // console.log(result)
 
-const arr = ['1, 22, 5, 6, 8, 12', 'apple', 'yellow'];
+// const arr = ['1, 22, 5, 6, 8, 12', 'apple', 'yellow'];
 
-const result1 = arr.reduce((sum, current) => sum + ', '+ current);
-const result2 = arr.reduce((sum, current) => `${sum}, ${current}`);
+// const result1 = arr.reduce((sum, current) => sum + ', '+ current);
+// const result2 = arr.reduce((sum, current) => `${sum}, ${current}`);
 
 
-console.log(result1)
-console.log(result2)
+// console.log(result1)
+// console.log(result2)
+
+
+const obj = {
+    ivan: 'persone',
+    andrey: 'persone',
+    dog: 'animal',
+    cat: 'animal'
+};
+
+const newArr = Object.entries(obj);
+
+console.log(newArr);
