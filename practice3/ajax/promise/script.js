@@ -19,7 +19,7 @@ req.then((product) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             product.status = 'order';
-            reject();
+            resolve(product);
         }, 2000);
     }).then(data => {
         data.modify = true;
@@ -28,7 +28,9 @@ req.then((product) => {
         console.log(data);
     }).catch(() => {
         console.error('proizoshla oshubka');
-    })
+    }).finally(() => {
+        console.log('finaly')
+    });
 
     
 });
