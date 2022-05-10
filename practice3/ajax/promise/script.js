@@ -38,8 +38,12 @@ const test = time => {
         setTimeout(() => resolve(), time);
     });
 };
-test(1000).then(() => console.log("1000ms"));
-test(2000).then(() => console.log("2000ms"));
+// test(1000).then(() => console.log("1000ms"));
+// test(2000).then(() => console.log("2000ms"));
+
+Promise.all([test(1000), test(2000)]).then(() => {
+    console.log('All')
+});
 
 
 
