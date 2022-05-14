@@ -297,9 +297,12 @@ window.addEventListener('DOMContentLoaded', function() {
     let offset = 0;
 
     if(slides.length < 10) {
-        current.textContent = `0${slideIndex}`;
+        total.textContent = `0${slide.length}`;
+        current.textContent = `0${slideIndex}`; 
     } else {
+        total.textContent = slide.length;
         current.textContent = slideIndex;
+        
     }
 
     slidesField.style.width = 100 * slides.length + '%';
