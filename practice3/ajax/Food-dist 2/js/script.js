@@ -297,10 +297,10 @@ window.addEventListener('DOMContentLoaded', function() {
     let offset = 0;
 
     if(slides.length < 10) {
-        total.textContent = `0${slide.length}`;
+        total.textContent = `0${slides.length}`;
         current.textContent = `0${slideIndex}`; 
     } else {
-        total.textContent = slide.length;
+        total.textContent = slides.length;
         current.textContent = slideIndex;
         
     }
@@ -345,6 +345,18 @@ window.addEventListener('DOMContentLoaded', function() {
         }
 
         slidesField.style.transform = `translateX(-${offset}px)`;
+
+        if (slideIndex == 1) {
+            slideIndex = slides.length;
+        } else {
+            slideIndex--;
+        }
+
+        if(slides.length < 10) {
+            current.textContent = `0${slideIndex}`;
+        } else {
+            current.textContent = slideIndex;
+        } 
     });
 
     // showSlides(slideIndex);
