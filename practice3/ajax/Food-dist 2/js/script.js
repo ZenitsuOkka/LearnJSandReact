@@ -296,45 +296,53 @@ window.addEventListener('DOMContentLoaded', function() {
     let slideIndex = 1;
 
     slidesField.style.width = 100 * slides.length + '%';
+    slidesField.style.display = 'flex';
+    slidesField.style.transition = '0.5s all';
 
-    showSlides(slideIndex);
+    slidesWrapper.style.overflow = 'hidden';
 
-    if(slides.length < 10) {
-        total.textContent = `0${slides.length}`;
-    } else {
-        total.textContent = slides.length;
-    }
+    slides.forEach(slide => {
+        slide.style.width = width;
+    });
+
+    // showSlides(slideIndex);
+
+    // if(slides.length < 10) {
+    //     total.textContent = `0${slides.length}`;
+    // } else {
+    //     total.textContent = slides.length;
+    // }
     
-    function showSlides(n) {
-        if (n > slides.length) {
-            slideIndex = 1;
-        }
+    // function showSlides(n) {
+    //     if (n > slides.length) {
+    //         slideIndex = 1;
+    //     }
         
-        if (n < 1) {
-            slideIndex = slides.length;
-        }
+    //     if (n < 1) {
+    //         slideIndex = slides.length;
+    //     }
 
-        slides.forEach((item) => item.style.display = 'none');
+    //     slides.forEach((item) => item.style.display = 'none');
 
-        slides[slideIndex - 1].style.display = 'block';
+    //     slides[slideIndex - 1].style.display = 'block';
 
-        if(slides.length < 10) {
-            current.textContent = `0${slideIndex}`;
-        } else {
-            current.textContent = slideIndex;
-        }
+    //     if(slides.length < 10) {
+    //         current.textContent = `0${slideIndex}`;
+    //     } else {
+    //         current.textContent = slideIndex;
+    //     }
 
-    }
+    // }
 
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
+    // function plusSlides(n) {
+    //     showSlides(slideIndex += n);
+    // }
 
-    prev.addEventListener('click', () => {
-        plusSlides(-1);
-    });
+    // prev.addEventListener('click', () => {
+    //     plusSlides(-1);
+    // });
 
-    next.addEventListener('click', () => {
-        plusSlides(1);
-    });
+    // next.addEventListener('click', () => {
+    //     plusSlides(1);
+    // });
 });
