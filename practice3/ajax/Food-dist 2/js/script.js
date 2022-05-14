@@ -296,6 +296,12 @@ window.addEventListener('DOMContentLoaded', function() {
     let slideIndex = 1;
     let offset = 0;
 
+    if(slides.length < 10) {
+        current.textContent = `0${slideIndex}`;
+    } else {
+        current.textContent = slideIndex;
+    }
+
     slidesField.style.width = 100 * slides.length + '%';
     slidesField.style.display = 'flex';
     slidesField.style.transition = '0.5s all';
@@ -311,6 +317,16 @@ window.addEventListener('DOMContentLoaded', function() {
             offset = 0;
         } else {
             offset += +width.slice(0, width.length - 2);
+        }
+
+        slidesField.style.transform = `translateX(-${offset}px)`;
+    });
+
+    prev.addEventListener('click', () => {
+        if (offset == 0){
+            offset = +width.slice(0, width.length - 2) * (slides.length - 1);
+        } else {
+            offset -= +width.slice(0, width.length - 2);
         }
 
         slidesField.style.transform = `translateX(-${offset}px)`;
