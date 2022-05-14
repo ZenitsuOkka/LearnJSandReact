@@ -294,9 +294,21 @@ window.addEventListener('DOMContentLoaded', function() {
         if (n > slides.length) {
             slideIndex = 1;
         }
+        
         if (n < 1) {
             slideIndex = slides.length;
         }
+
+        slides.forEach(item => item.style.displa = 'none');
+
+        slides[slideIndex - 1].style.displa = 'block';
     }
 
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    prev.addEventListener('click' () => {
+        plusSlides(-1);
+    });
 });
