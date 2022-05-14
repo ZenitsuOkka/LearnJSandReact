@@ -285,10 +285,13 @@ window.addEventListener('DOMContentLoaded', function() {
     //Slider
 
     const slides = document.querySelectorAll('.offer__slide'),
-          prev = document.querySelector('.offer__slide-prev'),
-          next = document.querySelector('.offer__slide-next');
+          prev = document.querySelector('.offer__slider-prev'),
+          next = document.querySelector('.offer__slider-next');
+
         
     let slideIndex = 1;
+
+    showSlides(slideIndex);
     
     function showSlides(n) {
         if (n > slides.length) {
@@ -299,16 +302,21 @@ window.addEventListener('DOMContentLoaded', function() {
             slideIndex = slides.length;
         }
 
-        slides.forEach(item => item.style.displa = 'none');
+        slides.forEach((item) => item.style.display = 'none');
 
-        slides[slideIndex - 1].style.displa = 'block';
+        slides[slideIndex - 1].style.display = 'block';
+
     }
 
     function plusSlides(n) {
         showSlides(slideIndex += n);
     }
 
-    prev.addEventListener('click' () => {
+    prev.addEventListener('click', () => {
         plusSlides(-1);
+    });
+
+    next.addEventListener('click', () => {
+        plusSlides(1);
     });
 });
