@@ -323,6 +323,18 @@ window.addEventListener('DOMContentLoaded', function() {
         }
 
         slidesField.style.transform = `translateX(-${offset}px)`;
+
+        if (slideIndex == slides.length) {
+            slideIndex = 1;
+        } else {
+            slideIndex++;
+        }
+
+        if(slides.length < 10) {
+            current.textContent = `0${slideIndex}`;
+        } else {
+            current.textContent = slideIndex;
+        }
     });
 
     prev.addEventListener('click', () => {
