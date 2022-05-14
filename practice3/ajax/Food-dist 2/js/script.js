@@ -190,8 +190,11 @@ window.addEventListener('DOMContentLoaded', function() {
     //     });
 
     axios.get('http://localhost:3000/menu')
-        .then(data => console.log(data));
-
+        .then(data => {
+            data.forEach(({img, altimg, title, descr, price}) => {
+                new MenuCard(img, altimg, title, descr, price, ".menu .container").render();
+            });
+        });
     // Forms
 
     const forms = document.querySelectorAll('form');
@@ -278,4 +281,22 @@ window.addEventListener('DOMContentLoaded', function() {
             closeModal();
         }, 4000);
     }
+
+    //Slider
+
+    const slides = document.querySelectorAll('.offer__slide'),
+          prev = document.querySelector('.offer__slide-prev'),
+          next = document.querySelector('.offer__slide-next');
+        
+    let slideIndex = 1;
+    
+    function showSlides(n) {
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+    }
+
 });
