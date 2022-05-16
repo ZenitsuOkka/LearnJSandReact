@@ -5,8 +5,14 @@
 // console.log(localStorage.getItem('number'));
 
 const checkbox = document.querySelector('#checkbox'),
-      form = documnet.querySelector('form'),
+      form = document.querySelector('form'),
       change = document.querySelector('#color');
 
+if (localStorage.getItem('isChecked')) {
+    checkbox.checked = true;
+}
 
+checkbox.addEventListener('change', () => {
+    localStorage.setItem('isChecked', true);
+});
 
