@@ -29,3 +29,13 @@ change.addEventListener('click', () => {
         form.style.backgroundColor = 'red';
     }
 });
+
+const persone = {
+    name: 'alex',
+    age: 25
+};
+
+const serializedPersone = JSON.stringify(persone);
+localStorage.setItem('alex', serializedPersone);
+
+console.log(JSON.parse(localStorage.getItem('alex')));
