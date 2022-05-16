@@ -285,6 +285,7 @@ window.addEventListener('DOMContentLoaded', function() {
     //Slider
 
     const slides = document.querySelectorAll('.offer__slide'),
+          slider = document.querySelector('.offer__slider'),
           prev = document.querySelector('.offer__slider-prev'),
           next = document.querySelector('.offer__slider-next'),
           total = document.querySelector('#total'),
@@ -314,6 +315,8 @@ window.addEventListener('DOMContentLoaded', function() {
     slides.forEach(slide => {
         slide.style.width = width;
     });
+
+    slider.style.position = 'relative'; 
 
     next.addEventListener('click', () => {
         if (offset == +width.slice(0, width.length - 2) * (slides.length - 1)){
