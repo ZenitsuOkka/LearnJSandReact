@@ -3,15 +3,17 @@
 // new RegExp('pattern', 'flags');
 // /pattern/f
 
-// const ans = prompt('Your name?');
+const ans = prompt('Your name?');
 
 const reg = /n/ig;
+console.log(reg.test(ans));
 // i
 // g
 // m
 
 // console.log(ans.match(reg));
-const pass = prompt('Your password?');
+// const pass = prompt('Your password?');
 
-console.log(pass.replace(/./, "*"));
+// console.log(pass.replace(/./, "*"));
 
+// console.log('12-15-17'.replace(/-/g, ":"));
