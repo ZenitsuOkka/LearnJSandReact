@@ -3,10 +3,24 @@
 // new RegExp('pattern', 'flags');
 // /pattern/f
 
-const ans = prompt('Your name?');
+// const ans = prompt('Your number?');
 
-const reg = /n/ig;
-console.log(reg.test(ans));
+// const reg = /\d/ig;
+// console.log(ans.match(reg));
+
+const string = 'My name is R2D2';
+
+console.log(string.match(/\W/i));
+
+// \D
+// \W
+
+
+// \d толоько числа
+// \w
+// \s
+
+
 // i
 // g
 // m
