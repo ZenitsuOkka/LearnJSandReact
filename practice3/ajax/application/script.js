@@ -5,6 +5,9 @@
 
 const ans = prompt('Your name?');
 
-const reg = /n/;
+const reg = /n/i;
+// i
+// g
+// m
 
-console.log(ans.search(reg));
+console.log(ans.match(reg));
