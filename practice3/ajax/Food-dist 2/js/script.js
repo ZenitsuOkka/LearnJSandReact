@@ -365,6 +365,11 @@ window.addEventListener('DOMContentLoaded', function() {
         return +str.replace(/\D/g, '');
     }
 
+    function dotOpacity() {
+        dots.forEach(dot => dot.style.opacity = '.5');
+        dots[slideIndex - 1].style.opacity = 1;
+    }
+
     next.addEventListener('click', () => {
         if (offset == deleteNotDiggits(width) * (slides.length - 1)){
             offset = 0;
@@ -386,8 +391,7 @@ window.addEventListener('DOMContentLoaded', function() {
             current.textContent = slideIndex;
         }
 
-        dots.forEach(dot => dot.style.opacity = '.5');
-        dots[slideIndex - 1].style.opacity = 1;
+        dotOpacity();
     });
 
     prev.addEventListener('click', () => {
@@ -411,8 +415,7 @@ window.addEventListener('DOMContentLoaded', function() {
             current.textContent = slideIndex;
         } 
 
-        dots.forEach(dot => dot.style.opacity = '.5');
-        dots[slideIndex - 1].style.opacity = 1;
+        dotOpacity();
     });
 
     dots.forEach(dot => {
@@ -430,10 +433,12 @@ window.addEventListener('DOMContentLoaded', function() {
                 current.textContent = slideIndex;
             } 
 
-            dots.forEach(dot => dot.style.opacity = '.5');
-            dots[slideIndex - 1].style.opacity = 1;
+            dotOpacity();
         });
     });
+
+    // dots.forEach(dot => dot.style.opacity = '.5');
+    // dots[slideIndex - 1].style.opacity = 1;
 
     // showSlides(slideIndex);
 
