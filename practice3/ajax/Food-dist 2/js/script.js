@@ -361,11 +361,15 @@ window.addEventListener('DOMContentLoaded', function() {
         dots.push(dot);
     }
 
+    function deleteNotDiggits(str) {
+        return +str.replace(/\D/g, '');
+    }
+
     next.addEventListener('click', () => {
-        if (offset == +width.replace(/\D/g, '') * (slides.length - 1)){
+        if (offset == deleteNotDiggits(width) * (slides.length - 1)){
             offset = 0;
         } else {
-            offset += +width.replace(/\D/g, '');
+            offset += deleteNotDiggits(width);
         }
 
         slidesField.style.transform = `translateX(-${offset}px)`;
@@ -388,9 +392,9 @@ window.addEventListener('DOMContentLoaded', function() {
 
     prev.addEventListener('click', () => {
         if (offset == 0){
-            offset = +width.replace(/\D/g, '') * (slides.length - 1);
+            offset = deleteNotDiggits(width) * (slides.length - 1);
         } else {
-            offset -= +width.replace(/\D/g, '');
+            offset -= deleteNotDiggits(width);
         }
 
         slidesField.style.transform = `translateX(-${offset}px)`;
@@ -416,7 +420,7 @@ window.addEventListener('DOMContentLoaded', function() {
             const slideTo = e.target.getAttribute('data-slide-to');
 
             slideIndex = slideTo;
-            offset = +width.replace(/\D/g, '') * (slideTo- 1);
+            offset = deleteNotDiggits(width) * (slideTo- 1);
 
             slidesField.style.transform = `translateX(-${offset}px)`;
 
