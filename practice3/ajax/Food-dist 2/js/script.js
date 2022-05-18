@@ -448,9 +448,9 @@ window.addEventListener('DOMContentLoaded', function() {
             }
 
             if (sex === "female") {
-                result.textContent = (447.7 + (9.2 * weight) + (3.1 * height) - (4.3 * age)) * ratio;
+                result.textContent = Math.round((447.7 + (9.2 * weight) + (3.1 * height) - (4.3 * age)) * ratio);
             } else {
-                result.textContent = (88.7 + (13.4 * weight) + (4.8 * height) - (5.7 * age)) * ratio;
+                result.textContent = Math.round((88.7 + (13.4 * weight) + (4.8 * height) - (5.7 * age)) * ratio);
             }
         }
         calcTotal();
@@ -470,6 +470,8 @@ window.addEventListener('DOMContentLoaded', function() {
                 });
 
                 e.target.classList.add(activeclass);
+
+                calcTotal();
             });
         }
         getStaticInformation('#gender', 'calculating__choose-item_active');
@@ -490,6 +492,7 @@ window.addEventListener('DOMContentLoaded', function() {
                         age = +input.value;
                         break;
                 }
+                calcTotal();
             });
         }
 
