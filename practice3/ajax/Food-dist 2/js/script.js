@@ -435,6 +435,13 @@ window.addEventListener('DOMContentLoaded', function() {
 
             dotOpacity();
         });
+
+        // calc
+
+        const result = document.querySelector('.calculating__result span');
+        let sex, height, weight, age, ratio;
+
+        
     });
 
     // dots.forEach(dot => dot.style.opacity = '.5');
