@@ -441,7 +441,19 @@ window.addEventListener('DOMContentLoaded', function() {
         const result = document.querySelector('.calculating__result span');
         let sex, height, weight, age, ratio;
 
-        
+        function calcTotal() {
+            if (!sex || !height || !weight || !age || !ratio) {
+                result.textContent = '____';
+                return;
+            }
+
+            if (sex === "female") {
+                result.textContent = (447.7 + (9.2 * weight) + (3.1 * height) - (4.3 * age)) * ratio;
+            } else {
+                result.textContent = (88.7 + (13.4 * weight) + (4.8 * height) - (5.7 * age)) * ratio;
+            }
+        }
+        calcTotal();
     });
 
     // dots.forEach(dot => dot.style.opacity = '.5');
