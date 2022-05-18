@@ -439,7 +439,9 @@ window.addEventListener('DOMContentLoaded', function() {
         // calc
 
         const result = document.querySelector('.calculating__result span');
-        let sex, height, weight, age, ratio;
+        let sex = 'female', 
+            height, weight, age, 
+            ratio = 1.375;
 
         function calcTotal() {
             if (!sex || !height || !weight || !age || !ratio) {
@@ -458,22 +460,25 @@ window.addEventListener('DOMContentLoaded', function() {
         function getStaticInformation(parentSelector, activeclass) {
             const elemenets = document.querySelectorAll(`${parentSelector} div`);
 
-            document.querySelector(parentSelector).addEventListener('click', (e) => {
-                if (e.target.getAttribute('data-ratio')) {
-                    ratio = +e.target.getAttribute('data-ratio');
-                } else {
-                    sex = e.target.getAttribute('id');
-                }
-
-                elemenets.forEach(elem => {
-                    elem.classList.remove(activeclass);
+            elemenets.forEach(elem => {
+                elem.addEventListener('click', (e) => {
+                    if (e.target.getAttribute('data-ratio')) {
+                        ratio = +e.target.getAttribute('data-ratio');
+                    } else {
+                        sex = e.target.getAttribute('id');
+                    }
+    
+                    elemenets.forEach(elem => {
+                        elem.classList.remove(activeclass);
+                    });
+    
+                    e.target.classList.add(activeclass);
+    
+                    calcTotal();
                 });
-
-                e.target.classList.add(activeclass);
-
-                calcTotal();
             });
         }
+
         getStaticInformation('#gender', 'calculating__choose-item_active');
         getStaticInformation('.calculating__choose_big', 'calculating__choose-item_active');
 
