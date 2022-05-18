@@ -454,6 +454,29 @@ window.addEventListener('DOMContentLoaded', function() {
             }
         }
         calcTotal();
+
+        function getStaticInformation(parentSelector, activeclass) {
+            const elemenets = document.querySelectorAll(`${parentSelector} div`);
+
+            document.querySelector(parentSelector).addEventListener('click', (e) => {
+                if (e.target.getAttribute('data-ratio')) {
+                    ratio = +e.target.getAttribute('data-ratio');
+                } else {
+                    sex = e.target.getAttribute('id');
+                }
+
+                console.log(ratio, sex);
+
+                elemenets.forEach(elem => {
+                    elem.classList.remove(activeclass);
+                });
+
+                e.target.classList.add(activeclass);
+            });
+        }
+        getStaticInformation('#gender', 'calculating__choose-item_active');
+        getStaticInformation('.calculating__choose_big', 'calculating__choose-item_active');
+
     });
 
     // dots.forEach(dot => dot.style.opacity = '.5');
