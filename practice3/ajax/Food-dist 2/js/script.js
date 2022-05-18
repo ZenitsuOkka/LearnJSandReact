@@ -465,8 +465,6 @@ window.addEventListener('DOMContentLoaded', function() {
                     sex = e.target.getAttribute('id');
                 }
 
-                console.log(ratio, sex);
-
                 elemenets.forEach(elem => {
                     elem.classList.remove(activeclass);
                 });
@@ -476,6 +474,29 @@ window.addEventListener('DOMContentLoaded', function() {
         }
         getStaticInformation('#gender', 'calculating__choose-item_active');
         getStaticInformation('.calculating__choose_big', 'calculating__choose-item_active');
+
+        function getDynamicInformation(selector) {
+            const input = document.querySelector(selector);
+
+            input.addEventListener('input', () => {
+                switch(input.getAttribute('id')) {
+                    case 'height':
+                        height = +input.value;
+                        break;
+                    case 'weight':
+                        weight = +input.value;
+                        break;
+                    case 'age':
+                        age = +input.value;
+                        break;
+                }
+            });
+        }
+
+        getDynamicInformation('#height');
+        getDynamicInformation('#weight');
+        getDynamicInformation('#age');
+
 
     });
 
