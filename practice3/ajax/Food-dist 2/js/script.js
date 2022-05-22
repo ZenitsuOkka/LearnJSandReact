@@ -456,6 +456,17 @@ window.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('ratio', 1.375);
         }
 
+        function initLocalSettings(selector, activeClass) {
+            const elements = document.querySelectorAll(selector);
+
+            elements.forEach(elem => {
+                elem.classList.remove(activeClass);
+                if (elem.getAttribute('id') === localStorage.getItem('sex')) {
+                    elem.classList.add(activeClass);
+                }
+            });
+        }
+
         function calcTotal() {
             if (!sex || !height || !weight || !age || !ratio) {
                 result.textContent = '____';
