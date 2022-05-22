@@ -25,4 +25,6 @@ class User {
     }
 }
 
-const ivan = new User('Andrey', 29);
+const andrey = new User('Andrey', 29);
+
+andrey.say();
