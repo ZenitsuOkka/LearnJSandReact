@@ -6,7 +6,7 @@ class User {
         this._age = age;
     }
 
-    #surname = 'Orlov;
+    #surname = 'Orlov';
 
     say = () => {
         console.log(`Имя пользователя: ${this.name} ${this.#surname}, возраст ${this._age}`);
