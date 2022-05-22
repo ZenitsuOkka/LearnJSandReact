@@ -464,8 +464,15 @@ window.addEventListener('DOMContentLoaded', function() {
                 if (elem.getAttribute('id') === localStorage.getItem('sex')) {
                     elem.classList.add(activeClass);
                 }
+                if (elem.getAttribute('data-ratio') === localStorage.getItem('ratio')) {
+                    elem.classList.add(activeClass);
+                }
             });
         }
+
+        initLocalSettings('#gender div', 'calculating__choose-item_active');
+        initLocalSettings('.calculating__choose_big div', 'calculating__choose-item_active');
+
 
         function calcTotal() {
             if (!sex || !height || !weight || !age || !ratio) {
@@ -481,8 +488,8 @@ window.addEventListener('DOMContentLoaded', function() {
         }
         calcTotal();
 
-        function getStaticInformation(parentSelector, activeclass) {
-            const elemenets = document.querySelectorAll(`${parentSelector} div`);
+        function getStaticInformation(selector, activeclass) {
+            const elemenets = document.querySelectorAll(selector);
 
             elemenets.forEach(elem => {
                 elem.addEventListener('click', (e) => {
@@ -505,8 +512,8 @@ window.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        getStaticInformation('#gender', 'calculating__choose-item_active');
-        getStaticInformation('.calculating__choose_big', 'calculating__choose-item_active');
+        getStaticInformation('#gender div', 'calculating__choose-item_active');
+        getStaticInformation('.calculating__choose_big div', 'calculating__choose-item_active');
 
         function getDynamicInformation(selector) {
             const input = document.querySelector(selector);
