@@ -1,5 +1,6 @@
 function cards() {
     // Используем классы для создание карточек меню
+
     class MenuCard {
         constructor(src, alt, title, descr, price, parentSelector, ...classes) {
             this.src = src;
@@ -41,19 +42,22 @@ function cards() {
         }
     }
 
-    // getResource('http://localhost:3000/menu')
-    //     .then(data => {
-    //         data.forEach(({img, altimg, title, descr, price}) => {
-    //             new MenuCard(img, altimg, title, descr, price, ".menu .container").render();
-    //         });
-    //     });
-
-    axios.get('http://localhost:3000/menu')
+    getResource('http://localhost:3000/menu')
         .then(data => {
             data.forEach(({img, altimg, title, descr, price}) => {
                 new MenuCard(img, altimg, title, descr, price, ".menu .container").render();
             });
-    });
-}  
+        });
+
+    async function getResource(url) {
+        let res = await fetch(url);
+    
+        if (!res.ok) {
+            throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+        }
+    
+        return await res.json();
+    }
+}
 
 module.exports = cards;
