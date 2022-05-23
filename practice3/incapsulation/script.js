@@ -26,5 +26,5 @@ class User {
 }
 
 const andrey = new User('Andrey', 29);
-
+andrey.age = 99;
 andrey.say();
